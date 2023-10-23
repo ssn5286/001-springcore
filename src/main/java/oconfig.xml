@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Spring data will take dependency from metadata shown below-->
+	<bean class="com.springcore1.Student" name="student1">
+		<!-- Declare as value as tag-->
+		<property name="studentId">
+			<value>22344</value>
+		</property>
+		<property name="studentName" value="Outside-Louisville" />
+
+
+		<property name="studentAddress">
+			<value>Louisville</value>
+		</property>
+
+	</bean>
+
+	<bean class="com.springcore1.Student" name="student2" p:studentId="220354" p:studentName="Maya" p:studentAddress="London" />
+
+
+</beans>

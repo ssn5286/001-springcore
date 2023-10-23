@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.springcore.cic.CICD" name="cicd">
+
+		<constructor-arg>
+			<set>
+				<value>"Set1"</value>
+				<value>"Set2"</value>
+				<value>"Set1"</value>
+
+			</set>
+
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="key1" value="value1" />
+				<entry key="key2" value="value2" />
+				<entry key="key3" value="value3" />
+				<entry key="key4" value="value4" />
+			</map>
+
+		</constructor-arg>
+		<constructor-arg>
+			<props>
+				<prop key="pkey1">pvalue1</prop>
+				<prop key="pkey2">pvalue2</prop>
+				<prop key="pkey3">pvalue3</prop>
+				<prop key="pkey1">pvalue1</prop>
+
+			</props>
+
+
+		</constructor-arg>
+
+
+	</bean>
+	<bean class="com.springcore.cic.CIC" name="cic">
+		<constructor-arg value="1" type="int"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>"list1"</value>
+				<value>"list1"</value>
+				<value>"list1"</value>
+				<value>"list1"</value>
+				<value>"list1"</value>
+
+			</list>
+
+		</constructor-arg>
+		<constructor-arg ref="cicd"></constructor-arg>
+
+
+	</bean>
+
+</beans>
