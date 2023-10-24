@@ -11,7 +11,7 @@ public class Emp {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Autowired
+//	@Autowired
 	public Emp(Address address) {
 		super();
 		System.out.println("Address constructor");		
@@ -21,7 +21,7 @@ public class Emp {
 	public Address getAddress() {
 		return address;
 	}
-	@Autowired
+//	@Autowired
 	public void setAddress(Address address) {
 		System.out.println("Address setAddress");
 		this.address = address;
